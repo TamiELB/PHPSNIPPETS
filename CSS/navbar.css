@@ -1,0 +1,117 @@
+header{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 50px;
+    box-shadow: 0 1px 8px #b3b3b3;
+}
+
+header .left{
+    margin-right: auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .left a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+header li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #555;
+    transition: all 0.3s ease 0s;
+    position: relative;
+}
+
+header nav a::after{
+    display: block;
+    content: '';
+    width: 0;
+    height: 1.5px;
+    background-color: #555;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+
+    transition: all 0.3s ease 0s;
+}
+
+header nav a:hover::after{
+    width: 100%;
+}
+
+header .toggle-button{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 30px;
+    height: 21px;
+}
+
+header .toggle-button .bar{
+    height: 4px;
+    width: 100%;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+    header .toggle-button{
+        display: flex;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 20px;
+    }
+
+    header .left{
+        width: 80%;
+        margin: 0 auto 0 auto;
+        padding: 0;
+    }
+
+    header nav{
+        margin: 0 auto 0 auto;
+        display: none;
+    }
+
+    header nav li{
+    margin-top: 30px;
+    }
+
+    header nav a{
+        font-size: small;
+    }
+
+    header .active{
+        display: flex;
+    }
+
+    header .active a{
+        font-size: medium;
+    }
+
+    header .active a::after{
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1.5px;
+        background-color: black;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+    }
+}
