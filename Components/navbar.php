@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="/Zeilschool/CSS/navbar.css">
+<link rel="stylesheet" type="text/css" href="/PHPSNIPPITS/CSS/navbar.css">
 
 </head>
     <body>
@@ -26,6 +26,6 @@
 
         
 
-        <script src="/Zeilschool/JS/navbar.js"></script>
+        <script src="/PHPSNIPPITS/JS/navbar.js"></script>
     </body>
 </html>
