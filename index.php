@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="CSS/main.css"> 
     </head>
         <body>
-            <?php include './Components/navbar.php'; ?>
+            <?php include './Components/Navbar.php'; ?>
             
         </body>
     </html>

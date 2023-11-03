@@ -19,7 +19,7 @@
                 <ul>
                     <li><a href="/PHPSNIPPETS/Views/CijferlijstAdmin.php">Cijferslijst</a></li>
                     <li><a href="/PHPSNIPPETS/Views/LessenOverzichtAdmin.php">lessen overzicht</a></li>
-                    <li><a href="/PHPSNIPPETS/Views/StudentenOverZichtAdmin.php">studenten overzicht</a></li>
+                    <li><a href="/PHPSNIPPETS/Views/StudentenOverzichtAdmin.php">studenten overzicht</a></li>
                 </ul>
             </nav>
         </header>
