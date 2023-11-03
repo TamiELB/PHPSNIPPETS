@@ -18,8 +18,8 @@
         <div class="ErrorPopup" id="ErrorPopup" style="display: <?php echo isset($_GET["error"]) ? 'inline' : 'none'; ?> ;">
             <div class="PopupContent">
                 <div class="TextWrapper">
-                    <p>An error has occurred: dskopdkpoakdpoakdsp</p>
-                </div>
+                    <p><?php echo $_GET["error"]?></p>
+                   </div>
                 <button class="CloseButton" onclick="CloseErrorPopup()">X</button>
             </div>
         </div>

@@ -7,7 +7,7 @@
     <body>
     <header>
             <div class="left">
-                <a href="/PHPSNIPPETS/index.php" class="title">ZeilSchool</a>
+                <a href="/PHPSNIPPETS/index.php" class="title">PHPSNIPPETS "school"</a>
 
                 <a class="toggle-button" onclick="ToggleMenu()">
                     <span class="bar"></span>

@@ -29,4 +29,5 @@
 
 .TextWrapper {
     margin-right: 10px; /* Margin adjusted for better spacing */
+    max-width: 70vw;
 }

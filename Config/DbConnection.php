@@ -25,7 +25,3 @@ class Database {
         return self::$pdo;
     }
 }
-
-// To use the database connection in your controllers or other parts of the application:
-$pdo = Database::getInstance();
-
