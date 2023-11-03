@@ -89,7 +89,7 @@ header .toggle-button .bar{
     }
 
     header nav li{
-    margin-top: 30px;
+    margin-top: 40px;
     }
 
     header nav a{
@@ -98,6 +98,11 @@ header .toggle-button .bar{
 
     header .active{
         display: flex;
+    }
+
+    header .active ul{
+        display: flex;
+        flex-direction: column;
     }
 
     header .active a{
