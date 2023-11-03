@@ -10,5 +10,7 @@
         <body>
             <?php include './Components/Navbar.php'; ?>
             
+
+            <?php include(__DIR__ . '/../Components/ErrorPopup.php'); ?>
         </body>
     </html>

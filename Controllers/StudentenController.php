@@ -3,11 +3,11 @@ class StudentenController{
     private $pdo;
 
     public function __construct() {
-        require_once(__DIR__ . '/../Config/Database.php');
+        require_once(__DIR__ . '/../Config/DbConnection.php');
         $this->pdo = Database::getInstance();
     }
 
-    public static  function GetAllStudenten(){
+    public function GetAllStudenten(){
         require_once(__DIR__ . '/../Models/Studenten.php'); 
 
          /** @var Studenten[] */
@@ -15,7 +15,7 @@ class StudentenController{
 
          try {
    
-            $stmt = self::$pdo->prepare("SELECT studenten.StudentID,
+            $stmt = $this->pdo->prepare("SELECT studenten.StudentID,
             studenten.Naam,
             studenten.Email,
             studenten.TelefoonNr,
@@ -41,15 +41,7 @@ class StudentenController{
         } catch (PDOException $e) {
             die("Error: " . $e->getMessage());
         }
+
         return $studenten;
     }
-}
-
-
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-}else{
-    header('Location: ../Views/StudentenOverZichtAdmin.php?error=test');
-    exit();
 }

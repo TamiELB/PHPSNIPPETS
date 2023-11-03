@@ -1,8 +1,8 @@
 <?php
     require_once(__DIR__ . '/../Controllers/StudentenController.php');
 
-    $students = StudentenController::GetAllStudenten();
-
+    $studentenController = new StudentenController();
+    $StudentenList = $studentenController->GetAllStudenten();
 
 ?>
 
@@ -12,17 +12,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studenten overzicht</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/StudentenOverZichtAdmin.css"> 
+    <link rel="stylesheet" type="text/css" href="../CSS/StudentenOverzichtAdmin.css"> 
 </head>
     <body>
         <?php include '../Components/Navbar.php'; ?>
 
-        <form action="/PHPSNIPPETS/Controllers/StudentenController.php" method="get">
+        <form action="/PHPSNIPPETS/include/Students.include.php" method="get">
             <button>test</button>
         </form>
 
+        <main>
+        <table class="studenten">
+            <tr>
+                <th>ID</th>
+                <th>Naam</th>
+                <th>Email</th>
+                <th>TelefoonNr</th>
+                <th>Adres</th>
+                <th>IsAdmin</th>
+                <th>IsActief</th>
+            </tr>
+            <?php  foreach ($StudentenList as $student) {?>
+            <tr>
+                <td><?php echo $student->StudentID?></td>
+                <td><?php echo $student->Naam?></td>
+                <td><?php echo $student->Email?></td>
+                <td><?php echo $student->TelefoonNr?></td>
+                <td><?php echo $student->Adres?></td>
+                <td><?php echo $student->IsAdmin?></td>
+                <td><?php echo $student->IsActief?></td>
+            </tr>
+            <?php } ?>
+        </table>
+        </main>
 
-
-        <?php include '../Components/ErrorPopup.php'; ?>
+        <?php include(__DIR__ . '/../Components/ErrorPopup.php'); ?>
     </body>
 </html>
