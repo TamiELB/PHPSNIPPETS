@@ -2,6 +2,6 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 }else{
-    header('Location: ../Views/StudentenOverzichtAdmin.php?error=test');
+    header('Location: ../Views/StudentenOverzichtAdmin.php?error=mauwmauw');
     exit();
 }

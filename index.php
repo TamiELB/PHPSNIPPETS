@@ -11,6 +11,6 @@
             <?php include './Components/Navbar.php'; ?>
             
 
-            <?php include(__DIR__ . '/../Components/ErrorPopup.php'); ?>
+            <?php include  './Components/ErrorPopup.php' ?>
         </body>
     </html>
