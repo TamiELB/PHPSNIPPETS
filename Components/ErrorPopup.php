@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="../CSS/ErrorPopup.css"> 
+    <link rel="stylesheet" type="text/css" href="/PHPSNIPPETS//CSS/ErrorPopup.css"> 
 </head>
     <body>
     
