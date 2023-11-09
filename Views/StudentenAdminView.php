@@ -16,7 +16,7 @@
 </head>
     <body>
         <?php include '../Components/Navbar.php'; ?>
-        
+
         <main>
             <table class="studenten">   
                 <thead>
@@ -38,8 +38,8 @@
                         <td data-label="Email"><?php echo $student->Email?></td>
                         <td data-label="TelefoonNr"><?php echo $student->TelefoonNr?></td>
                         <td data-label="Adres"><?php echo $student->Adres?></td>
-                        <td style="background-color: <?php echo $student->IsAdmin ? "" : "grey"?>;" data-label="IsAdmin"><?php echo $student->IsAdmin?></td>
-                        <td style="background-color: <?php echo $student->IsActief ? "" : "red"?>;" data-label="IsActief"><?php echo $student->IsActief?></td>
+                        <td style="background-color: <?php echo $student->IsAdmin ? "" : "rgba(255, 0, 0, 0.5);"?>;" data-label="IsAdmin"><?php echo $student->IsAdmin ? "Ja" : "Nee"?></td>
+                        <td style="background-color: <?php echo $student->IsActief ? "" : "rgba(255, 0, 0, 0.5);"?>;" data-label="IsActief"><?php echo $student->IsActief ? "Ja" : "Nee"?></td>
                         <td>
                             <form method="get" action="./StudentDetailAdminView.php">
                                 <input type="hidden" name="StudentID" value="<?php echo $student->StudentID;?>">

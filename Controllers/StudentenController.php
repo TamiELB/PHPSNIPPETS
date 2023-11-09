@@ -100,7 +100,7 @@ class StudentenController{
             $stmt->bindParam(':Adres', $AltStudent->Adres, PDO::PARAM_STR);
             $stmt->bindParam(':TelefoonNr', $AltStudent->TelefoonNr, PDO::PARAM_STR); 
             $stmt->bindParam(':Email', $AltStudent->Email, PDO::PARAM_STR);
-            $stmt->bindParam(':IsActief', $AltStudent->IsActief, PDO::PARAM_STR); 
+            $stmt->bindParam(':IsActief', $AltStudent->IsActief, PDO::PARAM_BOOL); 
             $stmt->bindParam(':StudentID', $AltStudent->StudentID, PDO::PARAM_INT);
             
 
