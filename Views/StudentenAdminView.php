@@ -42,9 +42,14 @@
                         <td data-label="Email"><?php echo $student->Email?></td>
                         <td data-label="TelefoonNr"><?php echo $student->TelefoonNr?></td>
                         <td data-label="Adres"><?php echo $student->Adres?></td>
-                        <td data-label="IsAdmin"><?php echo $student->IsAdmin?></td>
-                        <td data-label="IsActief"><?php echo $student->IsActief?></td>
-                        <td><form><button>Meer</button></form></td>
+                        <td style="background-color: <?php echo $student->IsAdmin ? "" : "red"?>;" data-label="IsAdmin"><?php echo $student->IsAdmin?></td>
+                        <td style="background-color: <?php echo $student->IsActief ? "" : "red"?>;" data-label="IsActief"><?php echo $student->IsActief?></td>
+                        <td>
+                            <form method="get" action="./StudentDetailAdminView.php">
+                                <input type="hidden" name="StudentID" value="<?php echo $student->StudentID;?>">
+                                <button>View more</button>
+                            </form>
+                        </td>
                     </tr>
                     <?php } ?>
                 </tbody>      
