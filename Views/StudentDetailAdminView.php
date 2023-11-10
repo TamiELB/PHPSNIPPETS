@@ -72,11 +72,31 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET' || empty($_GET['StudentID'])) {
                     </form>
                 </div>
                 <div class="Cijferlijst">
-                    <p>hoi</p>
+
+                <?php
+                require_once(__DIR__ . '/../Controllers/CijferlijstController.php');
+
+                $cijferlijstcontroller = new CijferlijstController();
+                $Cijferlijst = $cijferlijstcontroller->GetCijferForStudent($_GET['StudentID']);
+                ?>
+
+                <table>
+                    <tr>
+                        <th>Vak</th>
+                        <th>Cijfer</th>
+                    </tr>
+                    <?php  foreach ($Cijferlijst as $cijfer) {?>
+                    <tr>
+                        <td><?php echo $cijfer->Vak->Naam ?></td>
+                        <td><?php echo $cijfer->Cijfer?></td>
+                    </tr>
+                    <?php }?>
+                </table>
+
                 </div>
             </div>
             <div class="BottomWrapper">
-
+               
             </div>
         </main>
 

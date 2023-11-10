@@ -7,13 +7,25 @@ main{
     width: 80vw;
 
     padding: 20px;
-    margin: 75px auto 0 auto;
+    margin: 55px auto 0 auto;
+}
+
+
+.InfoHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  align-items: center;
+  gap: 20px;
+
+  padding: 20px;
 }
 
 
 .TopWrapper{
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 5fr 2fr;
     
 }
 
@@ -22,18 +34,8 @@ main > div{
 }
 
 .StudentInfo{
-    padding: 10px;
+    padding: 0px 10px;
 }
-
-.InfoHeader {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    align-items: center;
-    gap: 20px;
-}
-
 
 .TopStudentInfo{
     display: grid;
@@ -138,4 +140,13 @@ main > div{
 
   .form__field:not(:placeholder-shown) {
     border-color: #00A1DE; /* Change the border color to blue */
+}
+
+
+
+@media (max-width: 800px) {
+  .TopWrapper{
+      display: block;
+  }
+
 }
