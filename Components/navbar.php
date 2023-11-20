@@ -24,6 +24,12 @@
             </nav>
         </header>
 
-        <script src="/PHPSNIPPETS/JS/navbar.js"></script>
+        <script>
+            const nav = document.getElementById('nav');
+
+            function ToggleMenu(){
+                nav.classList.toggle('active');
+            };
+        </script>
     </body>
 </html>

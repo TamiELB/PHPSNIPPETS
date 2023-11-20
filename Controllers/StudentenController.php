@@ -95,7 +95,6 @@ class StudentenController{
                    isactief = :IsActief
             WHERE  studentid = :StudentID");
 
-
             $stmt->bindParam(':Naam', $AltStudent->Naam, PDO::PARAM_STR); 
             $stmt->bindParam(':Adres', $AltStudent->Adres, PDO::PARAM_STR);
             $stmt->bindParam(':TelefoonNr', $AltStudent->TelefoonNr, PDO::PARAM_STR); 
@@ -103,9 +102,8 @@ class StudentenController{
             $stmt->bindParam(':IsActief', $AltStudent->IsActief, PDO::PARAM_BOOL); 
             $stmt->bindParam(':StudentID', $AltStudent->StudentID, PDO::PARAM_INT);
             
-
             if ($stmt->execute()) {
-                header('Location:  /PHPSNIPPETS/Views/StudentenAdminView.php');
+                header('Location:  /PHPSNIPPETS/Views/StudentenAdminView.php?');
                 exit();
             } else {
                 header('Location:  /PHPSNIPPETS/Views/StudentDetailAdminView.php?StudentID=' . $AltStudent->StudentID . '&error=Error met opslaan van Student.');
